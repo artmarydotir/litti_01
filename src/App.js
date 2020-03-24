@@ -14,15 +14,33 @@ class App extends React.Component {
         id: 2,
         title: 'Hate Milk',
         completed: true
+      },
+      {
+        id: 3,
+        title: 'Love coding',
+        completed: true
       }
     ]
   }
-
+  topLevelComplete = (id) => {
+    // console.log(id)
+    this.setState({
+      todos: this.state.todos.map((todoItrate) => {
+        if(todoItrate.id === id) {
+          todoItrate.completed = !todoItrate.completed;
+        }
+        return todoItrate;
+      })
+    });
+  }
   render() {
     console.log(this.state.todos);
     return (
-      <div className="App">
-        <Todo todos={ this.state.todos } />
+      <div>
+        <Todo
+          todos={ this.state.todos }
+          markAsComplete={this.topLevelComplete}
+          />
       </div>
     );
   }
