@@ -13,3 +13,14 @@ a {
   color: #333;
   text-decoration: none;
 }
+.container {
+  padding: 0 1rem;
+}
+.btn {
+  border: none;
+  display: inline-block;
+  color: #fff;
+  background-color: rgb(121, 13, 49);
+  padding: 2px 4px;
+  cursor: pointer;
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import Todo from './components/Todos';
+import AddTodo from './components/AddTodo';
+import Header from './components/Layout/Header';
 import './App.css';
 
 class App extends React.Component {
@@ -36,18 +38,24 @@ class App extends React.Component {
   }
   // delete task event 
   deltTask = (id) => {
-     console.log(id)
+    this.setState({
+      todos: [...this.state.todos.filter(todo => todo.id !== id)]
+    });
   }
 
   render() {
     console.log(this.state.todos);
     return (
       <div>
-        <Todo
-          todos={ this.state.todos }
-          markAsComplete={this.topLevelComplete}
-          deltTask={this.deltTask}
+        <Header />
+        <div className="container">
+          <AddTodo />
+          <Todo
+            todos={ this.state.todos }
+            markAsComplete={this.topLevelComplete}
+            deltTask={this.deltTask}
           />
+        </div>
       </div>
     );
   }
