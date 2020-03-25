@@ -22,6 +22,7 @@ class App extends React.Component {
       }
     ]
   }
+  // toggle complete event
   topLevelComplete = (id) => {
     // console.log(id)
     this.setState({
@@ -33,6 +34,11 @@ class App extends React.Component {
       })
     });
   }
+  // delete task event 
+  deltTask = (id) => {
+     console.log(id)
+  }
+
   render() {
     console.log(this.state.todos);
     return (
@@ -40,6 +46,7 @@ class App extends React.Component {
         <Todo
           todos={ this.state.todos }
           markAsComplete={this.topLevelComplete}
+          deltTask={this.deltTask}
           />
       </div>
     );

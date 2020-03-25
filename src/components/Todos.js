@@ -13,6 +13,7 @@ class Todos extends React.Component {
         key={ todo.id }
         todo={ todo }
         checkComplete={this.props.markAsComplete}
+        deltTask={this.props.deltTask}
       />
     ));
   }

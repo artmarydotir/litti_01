@@ -30,6 +30,12 @@ export class TodoItem extends Component {
             onChange={this.props.checkComplete.bind(this, id)}
           />
           { title }
+          <button
+            style={btnStyle}
+            onClick={this.props.deltTask.bind(this, id)}
+            >
+              x
+          </button>
         </p>
       </div>
     )
@@ -46,4 +52,13 @@ TodoItem.propTypes = {
 // const itemStyle = {
 //   backgroundColor : '#eee'
 // }
+const btnStyle = {
+  border: 'none',
+  backgroundColor: 'red',
+  padding: '2px 8px',
+  color: '#fff',
+  borderRadius: '4px',
+  float: 'right',
+  cursor: 'pointer'
+}
 export default TodoItem;
