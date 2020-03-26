@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class AddTodo extends Component {
   // local-component state 
@@ -62,5 +63,8 @@ const inpStt = {
   flex: '10',
   padding: '6px'
 
+}
+AddTodo.propTypes = {
+  addTodo: PropTypes.func.isRequired
 }
 export default AddTodo;
