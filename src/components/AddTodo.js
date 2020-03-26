@@ -18,7 +18,7 @@ class AddTodo extends Component {
     if(this.state.title !== '') {
       this.props.addTodo(this.state.title);
     } else {
-      alert("Shame on you, Empty task? Raally?")
+      alert("Shame on you, Empty task? Really?")
     }
     this.setState({
       title: ''
