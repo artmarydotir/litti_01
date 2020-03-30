@@ -13,7 +13,7 @@ export class TodoItem extends Component {
     //   }
     // }
     return {
-      textDecoration:     this.props.todo.completed ? "line-through" : "none",
+      textDecoration: this.props.todo.completed ? "line-through" : "none",
       padding: "10px",
       backgroundColor: "#eee",
       margin: "8px 0",
