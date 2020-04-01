@@ -30,8 +30,7 @@
       "git add"
     ],
     "*.{js, jsx, json, html, css}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "browserslist": {
