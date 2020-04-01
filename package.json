@@ -17,9 +17,23 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit":"pretty-quick --staged"
+    "pre-commit":"pretty-quick --staged"
   },
-
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js, jsx, json, html, css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
