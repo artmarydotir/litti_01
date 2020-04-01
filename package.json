@@ -16,8 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "pre-commit":"lint-staged"
+    "eject": "react-scripts eject"
   },
   "husky": {
     "hooks": {
@@ -26,11 +25,11 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint"
     ],
     "*.{js, jsx, json, html, css}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   },
   "browserslist": {
