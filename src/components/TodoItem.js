@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class TodoItem extends Component {
   getStyle = () => {
@@ -13,11 +13,11 @@ export class TodoItem extends Component {
     //   }
     // }
     return {
-      textDecoration: this.props.todo.completed ? "line-through" : "none",
-      padding: "10px",
-      backgroundColor: "#eee",
-      margin: "8px 0",
-      borderBottom: "1px solid #ccc",
+      textDecoration: this.props.todo.completed ? 'line-through' : 'none',
+      padding: '10px',
+      backgroundColor: '#eee',
+      margin: '8px 0',
+      borderBottom: '1px solid #ccc',
     };
   };
 
@@ -52,12 +52,12 @@ TodoItem.propTypes = {
 //   backgroundColor : '#eee'
 // }
 const btnStyle = {
-  border: "none",
-  backgroundColor: "red",
-  padding: "2px 8px",
-  color: "#fff",
-  borderRadius: "4px",
-  float: "right",
-  cursor: "pointer",
+  border: 'none',
+  backgroundColor: 'red',
+  padding: '2px 8px',
+  color: '#fff',
+  borderRadius: '4px',
+  float: 'right',
+  cursor: 'pointer',
 };
 export default TodoItem;
