@@ -1,13 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import { v4 as uuidv4 } from 'uuid';
-import axios from "axios";
-import Todo from "./components/Todos";
-import AddTodo from "./components/AddTodo";
-import Header from "./components/Layout/Header";
-import About from "./components/pages/About";
+import axios from 'axios';
+import Todo from './components/Todos';
+import AddTodo from './components/AddTodo';
+import Header from './components/Layout/Header';
+import About from './components/pages/About';
 
-import "./App.css";
+import './App.css';
 
 class App extends React.Component {
   state = {
@@ -19,9 +19,10 @@ class App extends React.Component {
       // }
     ],
   };
+
   async componentDidMount() {
     const res = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos?_limit=6"
+      'https://jsonplaceholder.typicode.com/todos?_limit=6'
     );
     this.setState({
       todos: res.data,
@@ -57,7 +58,7 @@ class App extends React.Component {
     // });
     // with axios
     axios
-      .post("https://jsonplaceholder.typicode.com/todos", {
+      .post('https://jsonplaceholder.typicode.com/todos', {
         title,
         completed: false,
       })
