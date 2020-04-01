@@ -5,15 +5,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
 import Todo from './components/Todos';
 import AddTodo from './components/AddTodo';
+
 import Header from './components/Layout/Header';
 import About from './components/pages/About';
-
-
-
-
-
-
-
 
 import './App.css';
 
