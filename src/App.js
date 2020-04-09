@@ -12,6 +12,7 @@ import About from './components/pages/About';
 import './App.css';
 
 class App extends React.Component {
+  // const [ counter , setConter ] = useState(1);
   state = {
     todos: [
       // {
